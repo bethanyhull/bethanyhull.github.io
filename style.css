@@ -1,0 +1,391 @@
+/* fonts */
+@font-face {
+  font-family: 'CheapPine-Sans';
+  src: url('fonts/CheapPine-Sans.eot');
+  src: url('fonts/CheapPine-Sans.woff2') format('woff2'),
+       url('fonts/CheapPine-Sans.woff') format('woff'),
+       url('fonts/CheapPine-Sans.ttf') format('truetype'),
+       url('fonts/CheapPine-Sans.svg#CheapPine-Sans') format('svg'),
+       url('fonts/CheapPine-Sans.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kefa-Regular';
+  src: url('fonts/Kefa-Regular.woff') format('woff'),
+       url('fonts/Kefa-Regular.ttf') format('truetype'),
+       url('fonts/Kefa-Regular.svg#Kefa-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kefa-regular-webfont';
+  src: url('fonts/kefa-regular-webfont.eot');
+  src: url('fonts/kefa-regular-webfont.woff2') format('woff2'),
+       url('fonts/kefa-regular-webfont.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Vars*/
+:root {
+  --headerfont: 'CheapPine-Sans';
+  --bodyfont: 'Kefa-Regular';
+  --green: #192811;
+  --blue: #a8c5d8;
+  --grey: #ebeef4;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+margin: 0px;
+}
+
+h2 {
+  font-size: 4em;
+  font-family: var(--headerfont);
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px){
+h2 {
+   font-size: 3em;
+}
+}
+
+/* header styling is here*/
+header {
+  background-color: var(--green);
+  display: grid;
+grid-template-columns: 20px auto 1fr auto 20px;
+align-items: center;
+}
+
+header span {
+font-family: var(--headerfont);
+ color: var(--grey);
+font-size: 5em;
+grid-column: 2 / 3
+}
+
+header ul {
+  margin: 0;
+    padding: 0;
+list-style: none;
+grid-column: 4 / 5;
+}
+
+header li {
+display: inline;
+padding: 15px;
+}
+
+header li a {
+font-family: var(--bodyfont);
+color: var(--grey);
+text-decoration: none;
+font-size: 1.3em
+}
+
+@media only screen and (max-width: 992px){
+  header span {
+  font-size: 3.5em;
+  }
+  header li a {
+  font-size: 1.1em;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  header {
+  grid-template-columns: 20px 1fr 20px;
+grid-template-rows: auto auto;
+  align-items: center;
+  }
+
+  header span {
+  font-size: 3em;
+  text-align: center;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  }
+
+  header ul {
+  text-align: center;
+  grid-column: 2 / 3;
+grid-row: 2 / 3;
+padding: 5px;
+  }
+
+  header li {
+  display: inline;
+  padding: 10px;
+  }
+
+  header li a {
+  font-family: var(--bodyfont);
+  color: var(--grey);
+  text-decoration: none;
+  font-size: 1em
+  }
+}
+
+/* Title image styling begins here */
+.title-image {
+background-image: url("img/Alice_Lake.jpg");
+background-repeat: no-repeat;
+background-position: top;
+background-attachment: fixed;
+background-size: cover;
+height: 600px;
+display: grid;
+grid-template-columns: 1fr auto 1fr;
+grid-template-rows: 1fr auto auto 1fr;
+grid-template-areas:
+". . ."
+". title ."
+". tagline ."
+". . ."
+}
+.title-image h1 {
+font-family: var(--headerfont);
+color: var(--green);
+font-size:8em;
+text-align: center;
+border:12px solid var(--green);
+border-radius: 5px;
+padding:10px;
+grid-area: title;
+}
+.title-image span {
+  font-family: var(--bodyfont)
+  color: var(--green);
+  font-size:2em;
+  text-align: center;
+ margin: 10px;
+  grid-area: tagline;
+}
+
+@media only screen and (max-width: 992px){
+  .title-image {
+  height: 400px;
+  }
+  .title-image h1 {
+  font-size:6em;
+  border:10px solid var(--green);
+}
+  .title-image span {
+    font-size:1.5em;
+}
+}
+
+@media only screen and (max-width: 768px){
+  .title-image {
+  height: 300px;
+  }
+  .title-image h1 {
+  font-size:4em;
+  border:5px solid var(--green);
+}
+  .title-image span {
+    font-size:1em;
+}
+}
+
+/* Styling for the about section begins here */
+ .about {
+ display: grid;
+grid-template-columns: 200px auto auto 200px;
+grid-template-rows: auto auto;
+grid-template-areas:
+". title title ."
+". img1 about .";
+align-items: center;
+margin: 50px 0px 50px 0px;
+ }
+.about h2 {
+  color: var(--green);
+ grid-area: title;
+}
+
+.about img {
+height: 300px;
+width: auto;
+border-radius: 300px;
+border: 10px solid var(--green);
+margin-right: 40px;
+grid-area: img1;
+}
+.about p {
+font-family: var(--bodyfont);
+  font-size: 1.3em;
+grid-area: about;
+ }
+@media only screen and (max-width: 1250px){
+  .about {
+  grid-template-columns: 80px auto auto 80px;
+}
+}
+@media only screen and (max-width: 992px){
+  .about {
+ grid-template-columns: 100px auto auto 100px;
+  }
+ .about h2 {
+   font-size: 2.5em;
+ }
+ .about img {
+ height: 250px;
+ border: 8px solid var(--green);
+ }
+ .about p {
+   font-size: 1em;
+  }
+}
+@media only screen and (max-width: 800px){
+  .about {
+ grid-template-columns: 20px auto 20px;
+ grid-template-rows: auto auto auto;
+ grid-template-areas:
+ ". title ."
+ ". img1 ."
+ ". about .";
+  }
+
+ .about img {
+ max-height: 200px;
+ width: auto;
+ border-radius: 300px;
+ border: 10px solid var(--green);
+ margin: 20px auto;
+ }
+
+ .about p {
+   font-size: 1em;
+  }
+}
+
+/* Skills section begins here */
+
+.skills {
+  background-color: var(--green);
+  color: var(--grey);
+padding: 50px;
+}
+
+.skillwrap {
+display: flex;
+flex-wrap: wrap-reverse;
+justify-content: center;
+}
+.skills i {
+font-size: 5em;
+padding: 25px 50px;
+}
+
+@media only screen and (max-width: 800px){
+
+ .skills i {
+ font-size: 4em;
+ padding: 25px 50px;
+ }
+}
+
+/* Portfolio styling begins here */
+.portfolio {
+ margin: 50px 25px;
+ }
+
+.portfolio h2 {
+color: var(--green);
+}
+
+.example {
+margin: 30px;
+text-align: center;
+}
+
+.example img{
+max-width: 500px;
+height: auto;
+margin: auto;
+}
+
+.example p {
+font-family: var(--bodyfont);
+font-size: 1em;
+text-align: center;
+margin: 10px;
+}
+
+.port-examples {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+}
+@media only screen and (max-width: 1200px){
+  .example img{
+  max-width: 400px;
+}
+}
+
+@media only screen and (max-width: 800px){
+  .example img{
+  max-width: 300px;
+}
+}
+/* Contact styling begins here */
+
+.contact {
+padding: 50px;
+background-color: var(--green);
+}
+
+.contact h2 {
+ color: var(--grey);
+}
+
+.social-icons {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.social-icons i {
+color: var(--grey);
+font-size: 3em;
+padding: 20px;
+}
+
+@media only screen and (max-width: 992px){
+.social-icons i  {
+   font-size: 2em;
+}
+}
+
+/* footer styling begins here */
+footer {
+background-image: url("img/Alice_Lake2.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+height: 150px;
+padding: 30px;
+}
+
+
+footer p {
+color: var(--green);
+font-family: var(--bodyfont);
+font-size: 1em;
+font-weight: bold;
+}
+
+footer a {
+text-decoration: none;
+color: var(--green);
+}
+.copyright {
+padding-top: 10px;
+}
