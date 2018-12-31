@@ -278,10 +278,31 @@ display: flex;
 flex-wrap: wrap-reverse;
 justify-content: center;
 }
-.skills i {
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill i {
 font-size: 5em;
 padding: 25px 50px;
+transition: font-size .75s;
 }
+
+.skill span {
+  text-align: center;
+  font-family: var(--bodyfont);
+
+}
+
+.skill i:hover {
+  font-size: 7em;
+  transition: font-size .75s;
+}
+
+
 
 @media only screen and (max-width: 800px){
 
