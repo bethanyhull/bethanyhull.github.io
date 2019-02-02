@@ -340,11 +340,12 @@ margin: 10px;
 }
 
 .port-examples {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
+display: grid;
+justify-items: center;
+align-items: start;
+grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
+
 @media only screen and (max-width: 1200px){
   .example img{
   max-width: 400px;
