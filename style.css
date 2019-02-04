@@ -356,6 +356,12 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   .example img{
   max-width: 300px;
 }
+.port-examples {
+display: grid;
+justify-items: center;
+align-items: start;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
 }
 /* Contact styling begins here */
 
