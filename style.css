@@ -297,8 +297,8 @@ transition: font-size .75s;
 
 }
 
-.skill i:hover {
-  font-size: 7em;
+.skills:hover i {
+  font-size: 6em;
   transition: font-size .75s;
 }
 
@@ -327,7 +327,7 @@ text-align: center;
 }
 
 .example img{
-max-width: 500px;
+max-width: 100%;
 height: auto;
 margin: auto;
 }
@@ -346,24 +346,17 @@ align-items: start;
 grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
-@media only screen and (max-width: 1200px){
-  .example img{
-  max-width: 400px;
-}
-}
 
 @media only screen and (max-width: 800px){
-  .example img{
-  max-width: 300px;
-}
+  .portfolio {
+   margin: 0px;
+   }
+
 .port-examples {
-display: grid;
-justify-items: center;
-align-items: start;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 }
-/* Contact styling begins here */
+/* Contact styling begins here*/
 
 .contact {
 padding: 50px;
