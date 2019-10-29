@@ -279,10 +279,10 @@ height: 65vw;
     }
 
     &.hud-1 {
-      width: 80%;
+      width: 100%;
       position: absolute;
-      left: -20%;
-      top: -2rem;
+      left: -25%;
+      top: -1rem;
 
 
     }
@@ -300,13 +300,13 @@ height: 65vw;
       width: 90%;
       position: absolute;
       left: -45%;
-      top: 30%;
+      top: 7%;
       z-index: 0
 
 
     }
     &.hud-4 {
-      width: 65%;
+      width: 55%;
       position: absolute;
       left: 50%;
       top: 1rem;
@@ -317,8 +317,8 @@ height: 65vw;
     &.hud-5 {
       width: 35%;
       position: absolute;
-      left: 13vw;
-      top: 43vw;
+      left: 10vw;
+      top: 73vw;
 
 
     }
