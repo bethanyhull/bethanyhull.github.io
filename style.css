@@ -191,10 +191,10 @@ p, span {
       transform-origin: center center;
       -webkit-transform-origin: center center; }
     .huds .hud.hud-1 {
-      width: 80%;
+      width: 100%;
       position: absolute;
-      left: -20%;
-      top: -2rem; }
+      left: -25%;
+      top: -1rem; }
     .huds .hud.hud-2 {
       width: 25%;
       position: absolute;
@@ -204,18 +204,18 @@ p, span {
       width: 90%;
       position: absolute;
       left: -45%;
-      top: 30%;
+      top: 7%;
       z-index: 0; }
     .huds .hud.hud-4 {
-      width: 65%;
+      width: 55%;
       position: absolute;
       left: 50%;
       top: 1rem; }
     .huds .hud.hud-5 {
       width: 35%;
       position: absolute;
-      left: 13vw;
-      top: 43vw; } }
+      left: 5vw;
+      top: 80vw; } }
 .section4 {
   background-color: white;
   z-index: 1; }
