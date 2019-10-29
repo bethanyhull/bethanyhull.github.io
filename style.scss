@@ -1,0 +1,475 @@
+// // Variables
+$primary-font: 'Oswald', sans-serif;
+$secondary-font: 'Montserrat', sans-serif;
+
+$dark: rgb(34, 38, 48);
+$blue: rgb(56, 70, 93);
+$light: #E1E1E4;
+$lightestGreen: rgb(224, 222, 208);
+$green: rgb(85, 94, 41);
+$lightGreen: rgb(154, 164, 112);
+
+@mixin animation($name, $length) {
+  animation-name: $name;
+  animation-duration: $length;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-origin: center center;
+  -webkit-transform-origin: center center;
+}
+
+@mixin flexybox($flexdirect, $justify) {
+  display: flex;
+  flex-direction: $flexdirect;
+  justify-content: $justify;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.huds {
+  background-color: $light;
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+
+  .hud {
+    position: relative;
+    transform-origin: center center;
+      -webkit-transform-origin: center center;
+
+    .hud-background {
+      fill: $light;
+    }
+
+    .hud-color1 {
+      fill: $green;
+    }
+
+    .hud-color2 {
+      fill: $lightGreen;
+    }
+
+    .hud-color3 {
+      fill: $blue;
+    }
+
+    .rotate-1 {
+      @include animation(hud-1, 30s);
+    }
+
+    .rotate-2 {
+      @include animation(hud-1, 20s);
+    }
+
+    .rotate-3 {
+      @include animation(hud-2, 40s);
+    }
+
+    .rotate-4 {
+      @include animation(hud-2, 20s);
+    }
+
+    &.hud-1 {
+      width: 70%;
+      position: absolute;
+      left: -20vw;
+      top: -20vw;
+
+
+    }
+
+    &.hud-2 {
+      width: 25%;
+      position: absolute;
+      left: 40vw;
+      top: 1vw;
+
+
+    }
+
+    &.hud-3 {
+      width: 50%;
+      position: absolute;
+      left: -25vw;
+      top: 42vw;
+      z-index: 0
+
+
+    }
+    &.hud-4 {
+      width: 40%;
+      position: absolute;
+      left: 50vw;
+      top: -25vw;
+
+
+    }
+
+    &.hud-5 {
+      width: 20%;
+      position: absolute;
+      left: 13vw;
+      top: 43vw;
+
+
+    }
+
+  }
+
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: $primary-font;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: $primary-font;
+}
+
+h4, h5, h6 {
+  font-family: $primary-font;
+}
+
+p, span {
+  font-size: 1rem;
+  font-family: $secondary-font;
+}
+
+.section1 {
+  background-color: transparent;
+  position: relative;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+
+  .top-spacer {
+    height: 30vw;
+  }
+
+  .section1-content {
+    display: flex;
+
+
+    .tagline {
+      z-index: 1;
+      background-color: $dark;
+      color: $light;
+      font-family: $primary-font;
+      font-size: 3rem;
+      padding: 1rem;
+      margin-bottom: 6rem;
+      opacity: .9;
+    }
+  }
+
+  .left-spacer {
+    width: 35%;
+    flex-shrink: 0;
+  }
+
+}
+//section 1 tablet styling
+@media only screen and (max-width: 1100px) {
+  .section1 {
+
+
+    .top-spacer {
+height: 30vw;
+    }
+
+    .section1-content {
+
+      display: flex;
+      align-items: center;
+
+
+      .tagline {
+        z-index: 1;
+        background-color: $dark;
+        color: $light;
+        font-family: $primary-font;
+        font-size: 1.8rem;
+        padding: 1rem;
+        margin-bottom: 4rem;
+        opacity: .9;
+      }
+      .left-spacer {
+        width: 20%;
+        flex-shrink: 0;
+      }
+    }}
+}
+
+
+//section 1 mobile styling
+@media only screen and (max-width: 425px) {
+  .section1 {
+
+
+    .top-spacer {
+height: 65vw;
+    }
+
+    .section1-content {
+
+      display: flex;
+      align-items: center;
+
+
+      .tagline {
+        z-index: 1;
+        background-color: $dark;
+        color: $light;
+        font-family: $primary-font;
+        font-size: 1.3rem;
+        padding: 1rem;
+        margin-bottom: 3rem;
+        opacity: .9;
+      }
+      .left-spacer {
+        width: 25%;
+        flex-shrink: 0;
+      }
+    }
+
+}
+.huds{
+  .hud {
+    position: relative;
+    transform-origin: center center;
+      -webkit-transform-origin: center center;
+
+    .hud-background {
+      fill: $light;
+    }
+
+    .hud-color1 {
+      fill: $green;
+    }
+
+    .hud-color2 {
+      fill: $lightGreen;
+    }
+
+    .hud-color3 {
+      fill: $blue;
+    }
+
+    .rotate-1 {
+      @include animation(hud-1, 30s);
+    }
+
+    .rotate-2 {
+      @include animation(hud-1, 20s);
+    }
+
+    .rotate-3 {
+      @include animation(hud-2, 40s);
+    }
+
+    .rotate-4 {
+      @include animation(hud-2, 20s);
+    }
+
+    &.hud-1 {
+      width: 80%;
+      position: absolute;
+      left: -20%;
+      top: -2rem;
+
+
+    }
+
+    &.hud-2 {
+      width: 25%;
+      position: absolute;
+      left: 45%;
+      top: -1rem;
+
+
+    }
+
+    &.hud-3 {
+      width: 90%;
+      position: absolute;
+      left: -45%;
+      top: 30%;
+      z-index: 0
+
+
+    }
+    &.hud-4 {
+      width: 65%;
+      position: absolute;
+      left: 50%;
+      top: 1rem;
+
+
+    }
+
+    &.hud-5 {
+      width: 35%;
+      position: absolute;
+      left: 13vw;
+      top: 43vw;
+
+
+    }
+
+  }}
+}
+.section4 {
+  background-color: white;
+  z-index: 1;
+}
+
+.section3 {
+  background-color: $green;
+  z-index: 1;
+}
+.section2 {
+  background-color: $green;
+  z-index: 1;
+
+
+
+
+.mini-devicon {
+  font-size: 3rem;
+
+  @include flexybox(row, flex-start);
+
+  i{
+    padding: 1rem 1rem 1rem 0;
+  }
+}
+
+
+}
+
+.section3 {
+  @include flexybox(column, center);
+
+.s3-content {
+  @include flexybox(row, center);
+}
+}
+
+@keyframes hud-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hud-2 {
+  0% {
+    transform: rotate(360deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+//slider stuff
+
+/* Tabs*/
+
+#tabs{
+
+    color: $light;
+}
+
+
+#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: $light;
+    background-color: transparent;
+    border-color: transparent transparent $blue;
+    border-bottom: 4px solid !important;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+#tabs .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: $light;
+    font-size: 20px;
+
+
+}
+
+.nav-tabs {
+  @include flexybox(row, center);
+}
+
+.s3-img {
+  @include flexybox(row, center);
+}
+
+.about {
+  padding: 2rem 0;
+  color: $light;
+
+  .col-md-8 {
+    align-self: center;
+  }
+
+  img{
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  border: 3px solid $blue;
+  padding: .5rem;
+  margin: 1rem;
+  border-radius: 50%;
+
+}}
+
+.portfolio {
+  padding: 2rem 0;
+  h2 {
+    padding-bottom: 1rem;
+  }
+  h2 , h5 {
+    text-align: center;
+    color: $blue;
+  }
+
+  .website {
+    padding-bottom: 1rem;
+  }
+
+img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}}
+
+footer {
+  background-color: $light;
+  height: 10rem;
+  color: $blue;
+   .social-icons {
+     padding-top: 1rem;
+  i{
+    color: $blue;
+    padding: .5rem;
+    font-size: 2rem;
+  }}
+}
