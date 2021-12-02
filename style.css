@@ -90,6 +90,20 @@ p, span {
   font-size: 1rem;
   font-family: "Montserrat", sans-serif; }
 
+blockquote {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;}
+
+.cite {
+  font-size: .85rem;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;}
+
+.row {
+  margin-top: 2rem;
+}
+
 .section1 {
   background-color: transparent;
   position: relative;
